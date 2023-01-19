@@ -45,3 +45,7 @@ services folder
 2. write handleTypeChange function in hook
 3. pass handleTypeChange to type select component
 4. onChange of type select dropdown, call handleTypeChange
+
+## Plan 4: giggity goo
+
+1.
