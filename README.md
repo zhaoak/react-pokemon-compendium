@@ -38,3 +38,10 @@ services folder
 2. add type, setType useState (usePokemon.js)
 3. setType in some sort of function inside of useEffect (usePokemon.js)
 4. Import types from usePokemon.js and pass as prop to <TypeFilter /> (App.js)
+
+## Plan 3: augh
+
+1. write fetchPokemonByType fetch function
+2. write handleTypeChange function in hook
+3. pass handleTypeChange to type select component
+4. onChange of type select dropdown, call handleTypeChange
