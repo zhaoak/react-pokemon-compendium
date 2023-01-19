@@ -1,12 +1,17 @@
 import './App.css';
 import { usePokemon } from './hooks/usePokemon.js';
 
+import PokemonCard from './components/PokemonCard/PokemonCard.js';
+
 // import components
 
 function App() {
   const pokemon = usePokemon();
-  console.log(pokemon);
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <PokemonCard />
+    </div>
+  );
 }
 
 export default App;
