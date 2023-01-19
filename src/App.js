@@ -7,12 +7,12 @@ import TypeFilter from './components/TypeFilter/TypeFilter.js';
 // import components
 
 function App() {
-  const { pokemon, types } = usePokemon();
+  const { pokemon, types, handleTypeChange } = usePokemon();
 
   return (
     <div className="App">
       <div className="interface">
-        <TypeFilter types={types} />
+        <TypeFilter types={types} handleTypeChange={handleTypeChange} />
       </div>
       <section className="card-display">
         {pokemon.map((mon) => (
