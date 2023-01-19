@@ -10,12 +10,15 @@ function App() {
   return (
     <div className="App">
       <section className="card-display">
-        <PokemonCard
-          name="Bonkados"
-          type1="smelly"
-          type2="horrible"
-          img_url="http://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
-        />
+        {pokemon.map((mon) => (
+          <PokemonCard
+            key={mon._id}
+            name={mon.pokemon}
+            type1={mon.type_1}
+            type2={mon.type_2}
+            img_url={mon.url_image}
+          />
+        ))}
       </section>
     </div>
   );
