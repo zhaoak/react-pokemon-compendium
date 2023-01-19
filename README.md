@@ -31,3 +31,10 @@ services folder
    2. import hook
    3. distribute props/states/functions to components
    4. map pokemon arr to PokemonCard component
+
+## Plan 2: poke filter bugaloo
+
+1. fetchTypes (fetchPokemon.js)
+2. add type, setType useState (usePokemon.js)
+3. setType in some sort of function inside of useEffect (usePokemon.js)
+4. Import types from usePokemon.js and pass as prop to <TypeFilter /> (App.js)

@@ -23,3 +23,7 @@
 .pokemon-card-name {
   text-decoration: underline;
 }
+
+.pokemon-card-name::first-letter {
+  text-transform: capitalize;
+}

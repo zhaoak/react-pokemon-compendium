@@ -2,6 +2,7 @@ import './App.css';
 import { usePokemon } from './hooks/usePokemon.js';
 
 import PokemonCard from './components/PokemonCard/PokemonCard.js';
+import TypeFilter from './components/TypeFilter/TypeFilter.js';
 
 // import components
 
@@ -9,6 +10,7 @@ function App() {
   const pokemon = usePokemon();
   return (
     <div className="App">
+      <TypeFilter />
       <section className="card-display">
         {pokemon.map((mon) => (
           <PokemonCard
