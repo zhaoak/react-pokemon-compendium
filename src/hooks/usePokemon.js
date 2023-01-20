@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import { fetchAllPokemon, fetchTypes, fetchPokemonByType } from '../services/fetchPokemon.js';
+import { fetchAllPokemon, fetchTypes, fetchPokemonByFilter } from '../services/fetchPokemon.js';
 
 export function usePokemon() {
   const [pokemon, setPokemon] = useState([]);
   const [types, setTypes] = useState([]);
+  const [typeFilter, setTypeFilter] = useState('all');
+  const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(true);
   // type state
   // selected type state
@@ -29,10 +31,19 @@ export function usePokemon() {
 
   const handleTypeChange = async (type) => {
     setLoading(true);
-    const data = await fetchPokemonByType(type);
+    setTypeFilter(type);
+    const data = await fetchPokemonByFilter(type, query);
     setPokemon(data);
     setLoading(false);
   };
 
-  return { pokemon, types, handleTypeChange, loading };
+  const handleQueryChange = async (queryText) => {
+    setLoading(true);
+    setQuery(queryText);
+    const data = await fetchPokemonByFilter(typeFilter, queryText);
+    setPokemon(data);
+    setLoading(false);
+  };
+
+  return { pokemon, types, handleTypeChange, handleQueryChange, loading };
 }
