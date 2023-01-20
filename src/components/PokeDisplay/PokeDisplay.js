@@ -5,6 +5,7 @@ import PokemonCard from '../PokemonCard/PokemonCard.js';
 
 export default function PokeDisplay({ pokemon, loading }) {
   if (loading) return <p style={{ height: '100vh' }}>loading the mons</p>;
+  if (pokemon.length === 0) return <p style={{ height: '100vh' }}>No results found</p>;
   return (
     <section className="card-display">
       {pokemon.map((mon) => (
