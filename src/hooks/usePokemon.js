@@ -14,7 +14,7 @@ export function usePokemon() {
   useEffect(() => {
     setLoading(true);
     const fetchData = async () => {
-      const data = await fetchAllPokemon();
+      const data = await fetchAllPokemon('');
       setPokemon(data);
       setLoading(false);
     };
