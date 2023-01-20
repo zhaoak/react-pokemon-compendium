@@ -1,3 +1,7 @@
+//make individualPokemon setIndividualPokemon default empty object (possibly)
+//setID state when useParam changes
+//pass individualPokemon as prop to DetailPage, unpackage there
+
 import { useEffect, useState } from 'react';
 import { fetchAllPokemon, fetchTypes, fetchPokemonByFilter } from '../services/fetchPokemon.js';
 

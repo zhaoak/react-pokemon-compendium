@@ -11,6 +11,7 @@ export default function PokeDisplay({ pokemon, loading }) {
       {pokemon.map((mon) => (
         <PokemonCard
           key={mon._id}
+          _id={mon._id}
           name={mon.pokemon}
           type1={mon.type_1}
           type2={mon.type_2}

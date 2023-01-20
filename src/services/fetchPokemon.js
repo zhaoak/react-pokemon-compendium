@@ -1,3 +1,5 @@
+//fetchByID function
+
 export async function fetchAllPokemon(query) {
   const response = await fetch(
     `https://alchemy-pokedex.herokuapp.com/api/pokedex?pokemon=${query}&perPage=800`

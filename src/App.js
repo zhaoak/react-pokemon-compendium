@@ -1,25 +1,23 @@
 import './App.css';
-import { usePokemon } from './hooks/usePokemon.js';
 
-import QueryFilter from './components/QueryFilter/QueryFilter.js';
-import TypeFilter from './components/TypeFilter/TypeFilter.js';
-import PokeDisplay from './components/PokeDisplay/PokeDisplay.js';
-import Header from './components/Header/Header.js';
+import { BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
+import Main from './components/Main/Main.js';
+import DetailPage from './components/DetailPage/DetailPage.js';
 
 // import components
 
 function App() {
-  const { pokemon, types, handleTypeChange, handleQueryChange, loading } = usePokemon();
-
   return (
-    <div className="App">
-      <Header />
-      <div className="interface">
-        <QueryFilter handleQueryChange={handleQueryChange} />
-        <TypeFilter types={types} handleTypeChange={handleTypeChange} />
-      </div>
-      <PokeDisplay pokemon={pokemon} loading={loading} />
-    </div>
+    <BrowserRouter>
+      <Route exact path="/">
+        <Main />
+      </Route>
+      <Route path="/detail/:id">
+        <DetailPage />
+      </Route>
+    </BrowserRouter>
   );
 }
 

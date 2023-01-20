@@ -1,0 +1,12 @@
+.Main {
+  text-align: center;
+  background-color: #2a75bb;
+}
+
+.card-display {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 10px;
+}
