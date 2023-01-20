@@ -48,4 +48,7 @@ services folder
 
 ## Plan 4: giggity goo
 
-1.
+1. load stuff in fetch
+2. load stuff in hook
+3. load stuff as props in App
+4. load stuff if true component
