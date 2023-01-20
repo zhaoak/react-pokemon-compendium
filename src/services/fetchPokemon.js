@@ -12,10 +12,10 @@ export async function fetchTypes() {
   return data;
 }
 
-export async function fetchPokemonByType(type) {
+export async function fetchPokemonByFilter(type, query) {
   if (type === 'all') return await fetchAllPokemon();
   const response = await fetch(
-    `https://alchemy-pokedex.herokuapp.com/api/pokedex/?type=${type}&perPage=800`
+    `https://alchemy-pokedex.herokuapp.com/api/pokedex/?type=${type}&pokemon=${query}&perPage=800`
   );
   const data = await response.json();
   return data.results;
