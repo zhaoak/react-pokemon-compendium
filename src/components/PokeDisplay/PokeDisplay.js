@@ -4,7 +4,7 @@ import './PokeDisplay.css';
 import PokemonCard from '../PokemonCard/PokemonCard.js';
 
 export default function PokeDisplay({ pokemon, loading }) {
-  if (loading) return <p>loading the mons</p>;
+  if (loading) return <p style={{ height: '100vh' }}>loading the mons</p>;
   return (
     <section className="card-display">
       {pokemon.map((mon) => (
@@ -13,6 +13,7 @@ export default function PokeDisplay({ pokemon, loading }) {
           name={mon.pokemon}
           type1={mon.type_1}
           type2={mon.type_2}
+          hp={mon.hp}
           img_url={mon.url_image}
         />
       ))}

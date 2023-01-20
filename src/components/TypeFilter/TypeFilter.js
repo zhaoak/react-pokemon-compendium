@@ -3,7 +3,7 @@ import './TypeFilter.css';
 
 export default function TypeFilter({ types, handleTypeChange }) {
   return (
-    <div>
+    <div className="type-filter-section">
       <label>
         Filter by type:
         <select className="pokemon-select" onChange={(e) => handleTypeChange(e.target.value)}>
