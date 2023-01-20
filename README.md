@@ -52,3 +52,11 @@ services folder
 2. load stuff in hook
 3. load stuff as props in App
 4. load stuff if true component
+
+## Plan 5: the search
+
+1. make search function based on string in fetchPokemon.js
+2. add a handleQuery() to usePokemon.js inside usePokemon()
+3. Send handleQuery to App via useEffect
+4. add handleQuery as prop to QueryFilter component
+5. onChange call QueryFilter(e.value.target)

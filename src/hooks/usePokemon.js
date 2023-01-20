@@ -33,5 +33,6 @@ export function usePokemon() {
     setPokemon(data);
     setLoading(false);
   };
+
   return { pokemon, types, handleTypeChange, loading };
 }
