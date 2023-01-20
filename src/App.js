@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { usePokemon } from './hooks/usePokemon.js';
+
+import QueryFilter from './components/QueryFilter/QueryFilter.js';
+import TypeFilter from './components/TypeFilter/TypeFilter.js';
+import PokeDisplay from './components/PokeDisplay/PokeDisplay.js';
+import Header from './components/Header/Header.js';
+
+// import components
 
 function App() {
+  const { pokemon, types, handleTypeChange, handleQueryChange, loading } = usePokemon();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="interface">
+        <QueryFilter handleQueryChange={handleQueryChange} />
+        <TypeFilter types={types} handleTypeChange={handleTypeChange} />
+      </div>
+      <PokeDisplay pokemon={pokemon} loading={loading} />
     </div>
   );
 }

@@ -1,0 +1,30 @@
+.pokemon-card-container {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 150px;
+  width: 150px;
+  border: thick double darkgoldenrod;
+  line-height: 0;
+  padding: 25px;
+  background-color: lightblue;
+}
+
+.pokemon-card-image {
+  min-height: 50%;
+  max-width: 50%;
+}
+
+.pokemon-card-type {
+  line-height: 1em;
+}
+
+.pokemon-card-name {
+  text-decoration: underline;
+}
+
+.pokemon-card-name::first-letter {
+  text-transform: capitalize;
+}
