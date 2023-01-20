@@ -7,14 +7,14 @@ import PokeDisplay from './components/PokeDisplay/PokeDisplay.js';
 // import components
 
 function App() {
-  const { pokemon, types, handleTypeChange } = usePokemon();
+  const { pokemon, types, handleTypeChange, loading } = usePokemon();
 
   return (
     <div className="App">
       <div className="interface">
         <TypeFilter types={types} handleTypeChange={handleTypeChange} />
       </div>
-      <PokeDisplay pokemon={pokemon} />
+      <PokeDisplay pokemon={pokemon} loading={loading} />
     </div>
   );
 }

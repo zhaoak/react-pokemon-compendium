@@ -3,7 +3,8 @@ import './PokeDisplay.css';
 
 import PokemonCard from '../PokemonCard/PokemonCard.js';
 
-export default function PokeDisplay({ pokemon }) {
+export default function PokeDisplay({ pokemon, loading }) {
+  if (loading) return <p>loading the mons</p>;
   return (
     <section className="card-display">
       {pokemon.map((mon) => (

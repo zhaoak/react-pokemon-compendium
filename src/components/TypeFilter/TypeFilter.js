@@ -7,6 +7,9 @@ export default function TypeFilter({ types, handleTypeChange }) {
       <label>
         Filter by type:
         <select className="pokemon-select" onChange={(e) => handleTypeChange(e.target.value)}>
+          <option className="type-option" key="all" value="all">
+            All
+          </option>
           {types.map((type) => (
             <option className="type-option" key={type.type} value={type.type}>
               {type.type}
